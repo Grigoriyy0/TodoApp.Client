@@ -13,6 +13,8 @@ label{
 input{
     width: 300px;
     height: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 .Wrapper{
     margin-top: 20px;
@@ -35,4 +37,8 @@ button:hover{
     border: solid;
     opacity: 10;
     transition: 0.5s;
+}
+.wrap_input{
+    display: flex;
+    flex-direction: column;
 }
