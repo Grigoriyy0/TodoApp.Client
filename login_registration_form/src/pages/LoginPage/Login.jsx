@@ -1,6 +1,5 @@
 import {useState} from "react";
 import './LoginPage.css';
-import axios from "axios";
 import { useNavigate } from 'react-router-dom';
 
 
@@ -13,8 +12,10 @@ function Login(){
     const login = () => {
         fetch('http://localhost:5129/api/Users/login', {
             method: 'POST',
+            credentials : 'include',
             headers: {
                 'Content-Type': 'application/json',
+                'Authorization': `Bearer ${localStorage.getItem('token')}`,
             },
             body: JSON.stringify({
                 "username": username,
